@@ -1,0 +1,128 @@
+/* ------------------------------------------
+   REBUS Signage Scanner — Style Sheet
+   Font: Hanken Grotesk
+   Brand Palette + System UI
+------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&display=swap');
+
+:root {
+  /* Brand colours */
+  --rebus-blue: #1a3660;
+  --rebus-blue-dark: #1e4c8a;
+  --rebus-blue-mid: #1c6ed9;
+  --rebus-blue-light: #60bffa;
+  --rebus-neutral-black: #201e1d;
+  --rebus-red: #c81e0d;
+  --rebus-green: #00bd4d;
+  --rebus-yellow: #f6c500;
+  --rebus-purple: #c26987;
+  --bg-light: #f5f7fa;
+}
+
+/* Base layout */
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--rebus-neutral-black);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+/* Header */
+header {
+  background-color: var(--rebus-blue);
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Video feed */
+video {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: var(--rebus-blue);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: var(--rebus-blue-mid);
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Popup */
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 350px;
+}
+
+#popup h3 {
+  color: var(--rebus-blue);
+  margin-bottom: 8px;
+}
+
+#popup p {
+  margin-top: 0;
+  color: var(--rebus-neutral-black);
+}
+
+#popup textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Buttons inside popup */
+#popup button {
+  flex: 1;
+  margin: 5px;
+}
+
+#cancelButton {
+  background: #ccc;
+  color: #333;
+}
+
+#cancelButton:hover {
+  background: #b3b3b3;
+}
